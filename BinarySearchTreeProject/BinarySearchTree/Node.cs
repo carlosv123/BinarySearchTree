@@ -11,18 +11,32 @@ namespace BinarySearchTree
 
     public class Node
     {
+        internal static int number;
         public int data;
-        public Node leftchild;
-        public Node rightchild; 
+        public Node leftLeaf;
+        public Node rightLeaf; 
 
         public Node(int data)
         {
             this.data = data;
-            leftchild = null;
-            rightchild = null; 
+            leftLeaf = null;
+            rightLeaf= null; 
         }
-        
 
+        internal void insertData(int data)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal bool search(Node rightLeaf, int s)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal bool search(int s)
+        {
+            throw new NotImplementedException();
+        }
     }
   
 }

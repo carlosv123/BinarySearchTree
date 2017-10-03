@@ -9,63 +9,61 @@ namespace BinarySearchTree
    public class binarysearchtree
     {
 
-        public Node root;
-
-        public binarysearchtree()
+        Node rightLeaf;
+        Node leftLeaf;
+        int number;
+        
+        public bool isLeaf()
         {
-            root = null;
+            return (rightLeaf == null && leftLeaf == null);
         }
-        public int addnumber(int data)
+        public void insertData(int data)
         {
-            Node newnode = new Node(int data);
-            newnode.data = i;
-            if (root == null)
-                root = newnode;
-            else
+            if(number < data)
             {
-                Node current = root;
-                Node parent;
-                while (true)
+                if (rightLeaf == null)
                 {
-                    parent = current;
+                    rightLeaf = new Node(data);
                 }
-             }
-            if (current == null)
-            {
-                parent.rightchild = newndode;
-            }
-            else
-            {
-               if(current == null)
+                else
                 {
-                    parent.leftchild = new Node; 
+                    rightLeaf.insertData(data);
                 }
             }
-           public search(Node node,int data)
-        {
-            if (node.data != data)
+            else if(Node.number > data)
             {
-                return null;
-            }
-            else
-            {
-                if (node == null)
+                if(leftLeaf == null)
                 {
-                    return null;
+                    leftLeaf = new Node(data);
                 }
-                else if (data < node.data)
+                else
                 {
-                    return search(leftchild);
-                }
-                else (data > node.data)
-                {
-                    return search(rightchild);
+                    leftLeaf.insertData(data);
                 }
             }
-        } 
-
-            
-
         }
+          public bool search(int s)
+        {
+            if(number == s)
+            {
+                return true;
+            }
+            if(number < s)
+            {
+                if(rightLeaf == null)
+                {
+                    return false;
+                }
+                return rightLeaf.search(rightLeaf, s);
+            }
+            if (leftLeaf == null)
+            {
+                return false;
+            }
+            return leftLeaf.search(s);
+        }
+        
+
+        
     }
 }  

@@ -1,1 +1,2 @@
 C:\Users\vasqu\Desktop\BinarySearchTree\BinarySearchTree\bin\Debug\BinarySearchTree.exe.config
+C:\Users\vasqu\Desktop\binarysearchtree\BinarySearchTreeProject\BinarySearchTree\bin\Debug\BinarySearchTree.exe.config
