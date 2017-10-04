@@ -31,28 +31,52 @@ namespace BinarySearchTree
                     parent = current;
                     if(data < current.Data)
                     {
-                        current = current.lefchild;
+                        current = current.leftchild;
                         if (current == null)
                         {
-                            parent.lefchild = newNode;
+                            parent.leftchild = newNode;
                             break;
                         }
                     }
                     else
                     {
-                        current = current.lefchild;
+                        current = current.leftchild;
                         if(current == null)
                         {
-                            parent 
+                            parent.rightchild = newNode;
+                            break;
                         }
                     }
              
                 }
                 
 
-                }
+             }
+         }
+         public bool search(Node node, int data)
+        {
+            if (node == null)
+            {
+                return false;
             }
+            else if (node.Data == data)
+            {
+                return true;
+            } 
+            else if(node.Data < data)
+            {
+                return search(node.rightchild, data);
+            }  
+            else if(node.Data > data)
+            {
+                return search(node.leftchild, data);
+            }
+            return false;
+       
+
+        
         }
+   }
 
         
           

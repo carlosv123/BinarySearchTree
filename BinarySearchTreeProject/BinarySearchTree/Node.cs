@@ -11,7 +11,7 @@ namespace BinarySearchTree
    public class Node
     {
         public int Data;
-        public Node lefchild;
+        public Node leftchild;
         public Node rightchild;
     }
    
